@@ -1,0 +1,27 @@
+proxy:
+  listen:
+    address: "127.0.0.1"
+    port: 8080
+  services:
+    - name: test-h1
+      domain: h1
+      hosts:
+        - address: "127.0.0.1"
+          port: 9200
+    - name: test-h2
+      domain: h2
+      hosts:
+        - address: "127.0.0.1"
+          port: 9200
+        - address: "127.0.0.2"
+          port: 9200
+    - name: test-h3
+      domain: h3
+      hosts:
+        - address: "127.0.0.1"
+          port: 9200
+        - address: "127.0.0.2"
+          port: 9200
+        - address: "127.0.0.3"
+          port: 9200
+

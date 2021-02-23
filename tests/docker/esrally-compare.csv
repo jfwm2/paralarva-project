@@ -1,0 +1,158 @@
+Metric,Task,Baseline,Contender,Diff,Unit
+Cumulative indexing time of primary shards,,10.804433333333332,2.794366666666667,-8.01007,min
+Min cumulative indexing time across primary shard,,1.35195,0.5470833333333334,-0.80487,min
+Median cumulative indexing time across primary shard,,2.024833333333333,0.5516166666666666,-1.47322,min
+Max cumulative indexing time across primary shard,,2.7674499999999997,0.5948166666666667,-2.17263,min
+Cumulative indexing throttle time of primary shards,,0,0,0.00000,min
+Min cumulative indexing throttle time across primary shard,,0,0,0.00000,min
+Median cumulative indexing throttle time across primary shard,,0,0,0.00000,min
+Max cumulative indexing throttle time across primary shard,,0,0,0.00000,min
+Cumulative merge time of primary shards,,0.4488333333333333,0.05015,-0.39868,min
+Cumulative merge count of primary shards,,15,5,-10.00000,
+Min cumulative merge time across primary shard,,0.04413333333333334,0.008716666666666668,-0.03542,min
+Median cumulative merge time across primary shard,,0.08378333333333333,0.009949999999999999,-0.07383,min
+Max cumulative merge time across primary shard,,0.17135,0.011433333333333334,-0.15992,min
+Cumulative merge throttle time of primary shards,,0,0,0.00000,min
+Min cumulative merge throttle time across primary shard,,0,0,0.00000,min
+Median cumulative merge throttle time across primary shard,,0,0,0.00000,min
+Max cumulative merge throttle time across primary shard,,0,0,0.00000,min
+Cumulative refresh time of primary shards,,0.87695,0.5649,-0.31205,min
+Cumulative refresh count of primary shards,,85,101,+16.00000,
+Min cumulative refresh time across primary shard,,0.1553166666666667,0.08566666666666665,-0.06965,min
+Median cumulative refresh time across primary shard,,0.17383333333333334,0.11268333333333333,-0.06115,min
+Max cumulative refresh time across primary shard,,0.2025833333333333,0.13253333333333334,-0.07005,min
+Cumulative flush time of primary shards,,0,0,0.00000,min
+Cumulative flush count of primary shards,,5,5,0.00000,
+Min cumulative flush time across primary shard,,0,0,0.00000,min
+Median cumulative flush time across primary shard,,0,0,0.00000,min
+Max cumulative flush time across primary shard,,0,0,0.00000,min
+Total Young Gen GC time,,62.335,53.113,-9.22200,s
+Total Young Gen GC count,,7960,8049,+89.00000,
+Total Old Gen GC time,,0,0,0.00000,s
+Total Old Gen GC count,,0,0,0.00000,
+Store size,,0.04732033051550388,0.03915040288120508,-0.00817,GB
+Translog size,,2.561137080192566e-07,2.561137080192566e-07,0.00000,GB
+Heap used for segments,,0.0451202392578125,0.051422119140625,+0.00630,MB
+Heap used for doc values,,0.0056610107421875,0.0064697265625,+0.00081,MB
+Heap used for terms,,0.025634765625,0.029296875,+0.00366,MB
+Heap used for norms,,0,0,0.00000,MB
+Heap used for points,,0,0,0.00000,MB
+Heap used for stored fields,,0.013824462890625,0.015655517578125,+0.00183,MB
+Segment count,,28,32,+4.00000,
+Min Throughput,index,4834.477260181951,3169.0516718148447,-1665.42559,docs/s
+Mean Throughput,index,13172.616600546402,9967.70564536872,-3204.91096,docs/s
+Median Throughput,index,13015.578075066227,11223.007647944572,-1792.57043,docs/s
+Max Throughput,index,20415.67907582462,12836.357157543782,-7579.32192,docs/s
+50th percentile latency,index,1177.379294000275,2469.565364500113,+1292.18607,ms
+90th percentile latency,index,3115.1568860004772,3950.5489103001773,+835.39202,ms
+99th percentile latency,index,5812.072064101538,8036.739919599955,+2224.66786,ms
+100th percentile latency,index,6357.435518999409,9679.192754000269,+3321.75724,ms
+50th percentile service time,index,1177.379294000275,2469.565364500113,+1292.18607,ms
+90th percentile service time,index,3115.1568860004772,3950.5489103001773,+835.39202,ms
+99th percentile service time,index,5812.072064101538,8036.739919599955,+2224.66786,ms
+100th percentile service time,index,6357.435518999409,9679.192754000269,+3321.75724,ms
+error rate,index,0.0,0.0,0.00000,%
+Min Throughput,percolator_with_content_president_bush,10.162746845924486,11.06177399993597,+0.89903,ops/s
+Mean Throughput,percolator_with_content_president_bush,11.342640240115186,12.407044872672657,+1.06440,ops/s
+Median Throughput,percolator_with_content_president_bush,11.366172801416475,12.436605723743357,+1.07043,ops/s
+Max Throughput,percolator_with_content_president_bush,12.594183394322572,13.69319404326794,+1.09901,ops/s
+50th percentile latency,percolator_with_content_president_bush,10177.432322499044,9342.016706000322,-835.41562,ms
+90th percentile latency,percolator_with_content_president_bush,11279.864210898631,10149.649381000154,-1130.21483,ms
+99th percentile latency,percolator_with_content_president_bush,11530.409521000965,10311.729900070222,-1218.67962,ms
+100th percentile latency,percolator_with_content_president_bush,11563.90973499947,10331.939767000222,-1231.96997,ms
+50th percentile service time,percolator_with_content_president_bush,52.56068549988413,39.626381500056596,-12.93430,ms
+90th percentile service time,percolator_with_content_president_bush,69.85739790015943,56.73090330005835,-13.12649,ms
+99th percentile service time,percolator_with_content_president_bush,84.96982024043974,74.3094677100818,-10.66035,ms
+100th percentile service time,percolator_with_content_president_bush,86.86876299907453,101.89034399991215,+15.02158,ms
+error rate,percolator_with_content_president_bush,0.0,0.0,0.00000,%
+Min Throughput,percolator_with_content_saddam_hussein,29.183909126342286,38.15812328171205,+8.97421,ops/s
+Mean Throughput,percolator_with_content_saddam_hussein,29.61489680183684,38.341812869811434,+8.72692,ops/s
+Median Throughput,percolator_with_content_saddam_hussein,29.622012434630975,38.341812869811434,+8.71980,ops/s
+Max Throughput,percolator_with_content_saddam_hussein,30.038768844537252,38.52550245791082,+8.48673,ops/s
+50th percentile latency,percolator_with_content_saddam_hussein,2095.9382804994675,947.0828735002215,-1148.85541,ms
+90th percentile latency,percolator_with_content_saddam_hussein,2554.4244056989555,973.839192700143,-1580.58521,ms
+99th percentile latency,percolator_with_content_saddam_hussein,2608.2922598102596,996.8157555700918,-1611.47650,ms
+100th percentile latency,percolator_with_content_saddam_hussein,2609.104635001131,1001.9448040002317,-1607.15983,ms
+50th percentile service time,percolator_with_content_saddam_hussein,32.56900099950144,20.295407000048726,-12.27359,ms
+90th percentile service time,percolator_with_content_saddam_hussein,43.9782893001393,31.656486000247245,-12.32180,ms
+99th percentile service time,percolator_with_content_saddam_hussein,64.19182137997272,57.65698143960436,-6.53484,ms
+100th percentile service time,percolator_with_content_saddam_hussein,71.74466799915535,59.56435899997814,-12.18031,ms
+error rate,percolator_with_content_saddam_hussein,0.0,0.0,0.00000,%
+Min Throughput,percolator_with_content_hurricane_katrina,29.208808397847825,28.215854496131243,-0.99295,ops/s
+Mean Throughput,percolator_with_content_hurricane_katrina,30.793400864912318,29.79295542928136,-1.00045,ops/s
+Median Throughput,percolator_with_content_hurricane_katrina,31.405600339885144,30.226269917628233,-1.17933,ops/s
+Max Throughput,percolator_with_content_hurricane_katrina,31.765793857003985,30.936741874084607,-0.82905,ops/s
+50th percentile latency,percolator_with_content_hurricane_katrina,1739.8269454997717,1992.0488149998619,+252.22187,ms
+90th percentile latency,percolator_with_content_hurricane_katrina,2271.4965789002235,2352.745485399919,+81.24891,ms
+99th percentile latency,percolator_with_content_hurricane_katrina,2389.706439231759,2382.266032730122,-7.44041,ms
+100th percentile latency,percolator_with_content_hurricane_katrina,2399.2645160014945,2382.661411999834,-16.60310,ms
+50th percentile service time,percolator_with_content_hurricane_katrina,28.192432499963616,24.17040199998155,-4.02203,ms
+90th percentile service time,percolator_with_content_hurricane_katrina,41.18425319920789,37.28981239996757,-3.89444,ms
+99th percentile service time,percolator_with_content_hurricane_katrina,70.0290258004134,44.43342295997355,-25.59560,ms
+100th percentile service time,percolator_with_content_hurricane_katrina,76.85980799942627,45.42836900009206,-31.43144,ms
+error rate,percolator_with_content_hurricane_katrina,0.0,0.0,0.00000,%
+Min Throughput,percolator_with_content_google,9.119678396406536,10.025128426451666,+0.90545,ops/s
+Mean Throughput,percolator_with_content_google,9.465843993877485,10.252430662903365,+0.78659,ops/s
+Median Throughput,percolator_with_content_google,9.480845006539573,10.238452716550265,+0.75761,ops/s
+Max Throughput,percolator_with_content_google,9.78011741776379,10.502973322979031,+0.72286,ops/s
+50th percentile latency,percolator_with_content_google,10374.25783296294,9205.492728463014,-1168.76510,ms
+90th percentile latency,percolator_with_content_google,12471.090586796345,11274.278844996252,-1196.81174,ms
+99th percentile latency,percolator_with_content_google,12947.522377985151,11627.572168836114,-1319.95021,ms
+100th percentile latency,percolator_with_content_google,12992.461479629128,11671.895673629933,-1320.56581,ms
+50th percentile service time,percolator_with_content_google,88.10956950037507,83.72038749985222,-4.38918,ms
+90th percentile service time,percolator_with_content_google,113.17156719869672,116.15343459993713,+2.98187,ms
+99th percentile service time,percolator_with_content_google,129.75781835020837,178.76164677021285,+49.00383,ms
+100th percentile service time,percolator_with_content_google,149.25570500054164,187.7493389997653,+38.49363,ms
+error rate,percolator_with_content_google,0.0,0.0,0.00000,%
+Min Throughput,percolator_no_score_with_content_google,48.59822391462397,38.594004064401254,-10.00422,ops/s
+Mean Throughput,percolator_no_score_with_content_google,48.59822391462397,39.78241321765334,-8.81581,ops/s
+Median Throughput,percolator_no_score_with_content_google,48.59822391462397,39.78241321765334,-8.81581,ops/s
+Max Throughput,percolator_no_score_with_content_google,48.59822391462397,40.970822370905424,-7.62740,ops/s
+50th percentile latency,percolator_no_score_with_content_google,1597.6554415001374,2261.6151910001463,+663.95975,ms
+90th percentile latency,percolator_no_score_with_content_google,1709.6028140997078,2537.9353508000804,+828.33254,ms
+99th percentile latency,percolator_no_score_with_content_google,1742.0494758610403,2604.643578160253,+862.59410,ms
+100th percentile latency,percolator_no_score_with_content_google,1754.3245710003248,2610.9598930001994,+856.63532,ms
+50th percentile service time,percolator_no_score_with_content_google,13.07202550015063,17.265260499698343,+4.19323,ms
+90th percentile service time,percolator_no_score_with_content_google,18.76132770012191,26.001960300163795,+7.24063,ms
+99th percentile service time,percolator_no_score_with_content_google,25.055717369978108,38.557201589901595,+13.50148,ms
+100th percentile service time,percolator_no_score_with_content_google,29.936355000245385,51.87662099979207,+21.94027,ms
+error rate,percolator_no_score_with_content_google,0.0,0.0,0.00000,%
+Min Throughput,percolator_with_highlighting,34.16622638144546,28.722869467792083,-5.44336,ops/s
+Mean Throughput,percolator_with_highlighting,35.65233622534591,30.17769061741698,-5.47465,ops/s
+Median Throughput,percolator_with_highlighting,35.24023906046665,30.31487865800762,-4.92536,ops/s
+Max Throughput,percolator_with_highlighting,37.55054323412563,31.495323726451243,-6.05522,ops/s
+50th percentile latency,percolator_with_highlighting,1218.7323875014044,1939.455704500233,+720.72332,ms
+90th percentile latency,percolator_with_highlighting,1286.5772555012882,2757.1244394998303,+1470.54718,ms
+99th percentile latency,percolator_with_highlighting,1292.837961160385,2803.743038220073,+1510.90508,ms
+100th percentile latency,percolator_with_highlighting,1293.077557000288,2807.064311999966,+1513.98675,ms
+50th percentile service time,percolator_with_highlighting,20.016872999804036,28.163544999870282,+8.14667,ms
+90th percentile service time,percolator_with_highlighting,35.96799460046896,50.697932600132845,+14.72994,ms
+99th percentile service time,percolator_with_highlighting,43.940318371460386,124.66485854986803,+80.72454,ms
+100th percentile service time,percolator_with_highlighting,58.42534200019145,158.26066199997513,+99.83532,ms
+error rate,percolator_with_highlighting,0.0,0.0,0.00000,%
+Min Throughput,percolator_with_content_ignore_me,0.07202156564208975,0.08250149312281556,+0.01048,ops/s
+Mean Throughput,percolator_with_content_ignore_me,0.07272831665898467,0.08336328150717172,+0.01063,ops/s
+Median Throughput,percolator_with_content_ignore_me,0.07253872107484628,0.08339326352926399,+0.01085,ops/s
+Max Throughput,percolator_with_content_ignore_me,0.07591766510958317,0.08391269598833155,+0.00800,ops/s
+50th percentile latency,percolator_with_content_ignore_me,121653.23099450051,11287.336485000196,-110365.89451,ms
+90th percentile latency,percolator_with_content_ignore_me,194437.39497980004,13728.21714540005,-180709.17783,ms
+99th percentile latency,percolator_with_content_ignore_me,200296.45646204049,15490.312313900004,-184806.14415,ms
+100th percentile latency,percolator_with_content_ignore_me,201093.22133600106,15637.859528000263,-185455.36181,ms
+50th percentile service time,percolator_with_content_ignore_me,13939.274833001036,11260.091160000002,-2679.18367,ms
+90th percentile service time,percolator_with_content_ignore_me,14178.207937200568,11865.069566999866,-2313.13837,ms
+99th percentile service time,percolator_with_content_ignore_me,14368.060748219725,13198.53065180946,-1169.53010,ms
+100th percentile service time,percolator_with_content_ignore_me,14792.297945999962,13202.309562000664,-1589.98838,ms
+error rate,percolator_with_content_ignore_me,0.0,0.0,0.00000,%
+Min Throughput,percolator_no_score_with_content_ignore_me,15.065023504819704,15.06431679155493,-0.00071,ops/s
+Mean Throughput,percolator_no_score_with_content_ignore_me,15.089678133882053,15.086184013923644,-0.00349,ops/s
+Median Throughput,percolator_no_score_with_content_ignore_me,15.086349533768749,15.083172010559222,-0.00318,ops/s
+Max Throughput,percolator_no_score_with_content_ignore_me,15.125596213302384,15.122175494779269,-0.00342,ops/s
+50th percentile latency,percolator_no_score_with_content_ignore_me,9.301154999775463,10.952840500522143,+1.65169,ms
+90th percentile latency,percolator_no_score_with_content_ignore_me,11.790965601176145,15.049931233261308,+3.25897,ms
+99th percentile latency,percolator_no_score_with_content_ignore_me,16.491259525028003,21.526046826338657,+5.03479,ms
+100th percentile latency,percolator_no_score_with_content_ignore_me,17.296148334935424,24.20100966719474,+6.90486,ms
+50th percentile service time,percolator_no_score_with_content_ignore_me,8.216900499974145,9.975656000278832,+1.75876,ms
+90th percentile service time,percolator_no_score_with_content_ignore_me,11.218532201019121,13.89942310006518,+2.68089,ms
+99th percentile service time,percolator_no_score_with_content_ignore_me,15.323843161186236,20.66969636956857,+5.34585,ms
+100th percentile service time,percolator_no_score_with_content_ignore_me,16.154172000824474,23.28452100027789,+7.13035,ms
+error rate,percolator_no_score_with_content_ignore_me,0.0,0.0,0.00000,%

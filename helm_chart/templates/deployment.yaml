@@ -1,0 +1,94 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "chart.fullname" . }}
+  labels:
+    {{- include "chart.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "chart.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "chart.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "chart.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: {{ include "chart.fullname" . }}-app
+              containerPort: {{ .Values.app.config.proxy.listen.port }}
+              protocol: TCP
+            - name: {{ include "chart.fullname" . }}-data
+              containerPort: {{ .Values.app.data.service.port }}
+              protocol: TCP
+          command:
+            - {{ .Values.app.command.interpreter }}
+            - {{ .Values.app.command.launcher }}
+            {{- if and .Values.app.command.confDir .Values.app.command.confFileName }}
+            - --file
+            - {{ .Values.app.command.confDir }}/{{ .Values.app.command.confFileName }}
+            {{- end }}
+            - --listen-all-addr
+            {{- if .Values.app.command.logLevel }}
+            - --log-level
+            - {{ .Values.app.command.logLevel }}
+            {{- end }}
+            {{- if .Values.app.command.timeout }}
+            - --timeout
+            - "{{ .Values.app.command.timeout }}"
+            {{- end }}
+            {{- if .Values.app.data.service.port }}
+            - --prometheus-port
+            - "{{ .Values.app.data.service.port }}"
+            {{- end }}
+            {{- if .Values.app.command.dryRun }}
+            - --dry-run
+            {{- end }}
+          volumeMounts:
+          - name: config-volume
+            mountPath: {{ .Values.app.command.confDir }}
+          livenessProbe:
+            httpGet:
+              path: /
+              port: {{ include "chart.fullname" . }}-data
+          readinessProbe:
+            httpGet:
+              path: /
+              port: {{ include "chart.fullname" . }}-data
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: config-volume
+          configMap:
+            name: {{ include "chart.fullname" . }}-configmap
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

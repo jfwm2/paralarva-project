@@ -1,0 +1,41 @@
+replicaCount: 1
+
+image:
+  repository: jfwm/paralarva
+  pullPolicy: IfNotPresent
+  tag: "0.2.0"
+
+imagePullSecrets: []
+nameOverride: "paralarva"
+fullnameOverride: "paralarva"
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: paralarva-user
+
+service:
+  type: NodePort
+  nodePort: 30303
+
+ingress:
+  enabled: false
+
+autoscaling:
+  enabled: false
+
+app:
+  command:
+    interpreter: "/usr/local/bin/python"
+    launcher: "main.py"
+    confDir: "/opt/paralarva/config"
+    confFileName: "config.yaml"
+    logLevel: "info"
+    timeout: 30
+    dryRun: false
+  data:
+    service:
+      type: NodePort
+      port: 8000
+      nodePort: 30300
+  config:

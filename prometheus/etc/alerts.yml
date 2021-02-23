@@ -1,0 +1,25 @@
+groups:
+  - name: paralarva
+    rules:
+      - alert: InstanceDown 
+        expr: up{job="paralarva"} < 1 
+        for: 5m
+        annotations:
+          summary: "Instance down for more than 5 minutes"
+      - alert: RequestLatencyHigh
+        expr: histogram_quantile(0.95, sum by(le, instance, job, port, server) (rate(request_processing_seconds_bucket[1m]))) > 1
+        for: 5m
+        annotations:
+          summary: "95th percentile of incoming requests latency is above 1s"
+      - alert: SocketLatencyHigh
+        expr: histogram_quantile(0.95, sum by(le, instance, job, server, port, order) (rate(socket_exchange_latency_seconds_bucket[1m]))) > 0.5
+        annotations:
+          summary: "95th percentile of socket latency with a member server is more than 500ms"
+          description: "The time between a packet is send to a member server and a response is received is more than 500ms"
+        for: 5m
+      - alert: ErrorRateHigh
+        expr: rate(status_total{error!="None"}[1m]) / ignoring(error) group_left sum without(error)(rate(status_total[1m])) > 0.01
+        for: 5m
+        annotations:
+          summary: "Error rate is above 1% for a specific error code"
+
