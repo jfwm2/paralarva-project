@@ -34,7 +34,7 @@ app:
     confDir: "/opt/paralarva/config"
     confFileName: "config.yaml"
     logLevel: "info"
-    timeout: 30
+    timeout: 10
     dryRun: false
   data:
     service:
