@@ -269,6 +269,6 @@ $ esrally compare --baseline c0195678-a6af-4241-b5f9-9aae71b15a7b --contender e3
 
 [summary report definitions]: https://esrally.readthedocs.io/en/stable/summary_report.html
 [esrally-compare.csv]: esrally-compare.csv
-[esrally-compare.html]: esrally-compare.html
+[esrally-compare.html]: https://htmlpreview.github.io/?https://github.com/jfwm2/paralarva-project/blob/main/tests/docker/esrally-compare.html
 [esrally-compare.md]: esrally-compare.md
 
