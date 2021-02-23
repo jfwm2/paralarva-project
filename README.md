@@ -33,7 +33,7 @@ the following files (other files in the same directory have not been changed aft
 
 This chart can be deployed by running `helm install paralarva helm_chart --values helm_chart/values.yaml` at the root
 of the project (or `helm upgrade paralarva helm_chart --values helm_chart/values.yaml` if the chart is already
-installed).
+installed). Note that corresponding pods may need to be restarted for some changes to be taken into account. 
 
 The `values` file can also be generated to reflect a proxy configuration provided in a file having the same format as
 [config.yaml]. Please, see below ([how to deploy on kubernetes]) for more information.
@@ -127,7 +127,8 @@ How to deploy on kubernetes
   values of the chart to be deployed) and [config.yaml] (or another configuration
   file)
 
-  2) run `./build_and_deploy_chart.sh [config_file.yaml]`
+  2) run `./build_and_deploy_chart.sh [config_file.yaml]` 
+     Note that corresponding pods may need to be restarted for some changes to be taken into account.
 
   3) the service is reachable on node port 30303 (see below example with `minikube`)
 
@@ -146,7 +147,8 @@ Using only docker
 
 prerequisite:
  - 8 gb memory available
- - [Set vm.max_map_count to at least 262144]
+ - [Set vm.max_map_count to at least 262144] 
+   **This is important! Elasticsearch containers in a cluster may fail without this setting**.
 
 launch a prometheus container (optional)
 ```
@@ -156,7 +158,8 @@ container paralarva-prometheus created with ID 187bc23006c2b5d4f44494a3a000a4e33
 ```
 
 launch two docker elasticsearch clusters (`es0` with 1 node and `es1` with 3 nodes)
-and install/upgrade helm chart accordingly
+and install/upgrade helm chart accordingly. Note that corresponding pods may need to be restarted
+for some changes to be taken into account. 
 ```
 $ ./tests/docker/create_es_clusters_and_build_minkube_chart.sh
 removing container es0n1 if it exits
